@@ -1,1 +1,1 @@
-let abs_value x = if x < 0 then x -(2*x) else x;;
+let abs_value x = if x > 0 then x else -x;;
