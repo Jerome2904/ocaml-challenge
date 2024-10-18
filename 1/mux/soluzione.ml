@@ -6,7 +6,8 @@ let mux2_3 (s0:bool) (a:bool) (b:bool) : bool = match s0 with
 | true  -> a
 | false -> b;;
 
-let mux4 s1 s0 a0 a1 a2 a3 = mux2_2 s1 (mux2_2 s0 a0 a1) (mux2_2 s0 a2 a3);; 
+let mux4 s1 s0 a0 a1 a2 a3 = mux2_2 s1 (mux2_2 s0 a3 a2) (mux2_2 s0 a1 a0);; 
+
 
 assert(mux4 false false false true false true = false);;
 assert(mux4 false true false true false true = true);;
